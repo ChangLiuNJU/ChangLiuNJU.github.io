@@ -1,3 +1,4 @@
-name: Your New Jekyll Site
+name: Chang Liu's Blog 
 markdown: redcarpet
+timezone : Asia/Shanghai
 pygments: true
