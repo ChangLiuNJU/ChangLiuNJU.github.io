@@ -29,6 +29,10 @@ html>body #box {
 	height: 21px;
 	min-height: 21px;
 }
+#footer-text {
+	padding-top: 6px;
+	font-size: 14px;
+}
 #head {
 	height: 130px;
 	min-height: 130px;
