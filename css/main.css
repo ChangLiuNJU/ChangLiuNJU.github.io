@@ -7,31 +7,35 @@ body {
 	text-align: center;
 }
 #navigation {
-	margin-top: 60px;
-	/*line-height: 40px;*/
-	margin-left: 60px;
-	width: 200px;
+	margin-top: 40px;
+	margin-left: 0;
+	margin-right: auto;
+	width: 160px;
 	font-size: 1.17em;
 	float: left;
 	text-align: right;
 	text-transform: uppercase;
 }
-#navigation span {
+#navigation a{
+	display: block;
 	margin-bottom: 20px;
+	width: 100%;
 }
 #box {
 	margin: 20px auto;
 	text-align: left;
-	max-width: 650px;
+	max-width: 1000px;
 }
-html>body #box {
-	max-width: 650px;
+/*html>body #box {
+	max-width: 800px;
 	margin-bottom: 20px;
-}
+}*/
 #content {
+	width: 600px;
 	padding : 20px 10px;
-	margin: 20px 20px;
+	margin: 20px auto;
 	line-height: 26px;
+	text-align: left;
 }
 #footer {
 	width: 600px;
@@ -61,7 +65,7 @@ html>body #box {
 }
 #head h1 {
 	color: #f5f5f5;
-	font-size: 24px;
+	font-size: 1.17em;
 }
 #head p {
 	color: #f5f5f5;
