@@ -6,9 +6,6 @@ categories:
 - LeetCode
 tags:		[LeetCode]
 ---
-
-[See the problem on LeetCode](http://oj.leetcode.com/problems/climbing-stairs/)
-
 Here is the problem:
 
 >You are climbing a stair case. It takes n steps to reach to the top.
@@ -21,7 +18,7 @@ It's a simple recursion problem. The number of distinct ways to reach the n stai
 
 Note that, T(n) is a Fibonacci number. So we can use the Binet's formula to caculate it in the complexity of O(1).
 
-Here is my code.
+My code.
 
 {% highlight python %}
 class Solution:
@@ -32,4 +29,5 @@ class Solution:
 		t = 2.23606797749979
 		result = (((1 + t)/2)**n - ((1 - t)/2)**n)/t
 		return int(round(result.real))
-{% endhighlight %}    
+{% endhighlight %}
+[See the problem on LeetCode](http://oj.leetcode.com/problems/climbing-stairs/)

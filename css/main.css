@@ -26,10 +26,6 @@ body {
 	text-align: left;
 	max-width: 1000px;
 }
-/*html>body #box {
-	max-width: 800px;
-	margin-bottom: 20px;
-}*/
 #content {
 	width: 600px;
 	padding : 20px 10px;
@@ -80,4 +76,15 @@ a {
 a:hover {
 	color: #000;
 	text-decoration: underline;
+}
+blockquote {
+	margin-left: 0px;
+	background-color: #fff;
+	width: 600px;
+	/*padding-left: 1px;*/
+	/*border-left: 3px solid #4c4c4c*/
+}
+code {
+	font-family: Monaco, "Courier New", Courier;
+	font-size: 1em;
 }
