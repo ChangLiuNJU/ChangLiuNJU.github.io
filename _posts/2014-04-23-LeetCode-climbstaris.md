@@ -17,7 +17,7 @@ It's a simple recursion problem. The number of distinct ways to reach the n stai
 
 Note that, T(n) is a Fibonacci number. So we can use the Binet's formula to calculate it in O(1).
 
-Here is my code
+Here is my code.
 
 {% highlight python %}
 class Solution:
