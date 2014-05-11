@@ -1,7 +1,8 @@
 ---
 layout: 	post
 title:  	"Climbing Stairs"
-date:   	2014-04-23
+date:   	2014-04-23 00:00:00-0000
+modified:   2014-05-11 00:00:00-0000
 categories: 
 - LeetCode
 tags:		[LeetCode]
@@ -11,7 +12,7 @@ tags:		[LeetCode]
 
 >Each time you can either climb 1 or 2 steps. In how many distinct ways can you climb to the top?
 
-It's a simple recursion problem. The number of distinct ways to reach the n stair equals the sum of that to reach the n-1 and n-2 stair, so we have the recursive function: 
+It's a simple recursion problem. The number of distinct ways to reach the n stair equals the sum of the case in n-1 and n-2, so we have the recursive function: 
 
 *T(n) = T(n-1) + T(n-2), T(0) = 1, T(1) = 1*
 

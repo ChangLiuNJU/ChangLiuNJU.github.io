@@ -1,7 +1,8 @@
 ---
 layout: 	post
 title:  	"Convert Sorted Array to Binary Search Tree"
-date:   	2014-05-05
+date:   	2014-05-05 00:00:00-0000
+modified:	2014-05-05 00:00:00-0000
 categories: 
 - LeetCode
 tags:		[LeetCode]

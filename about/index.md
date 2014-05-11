@@ -12,7 +12,7 @@ Popping Dancer
 
 ---
 
-###CONTACT:
+###CONTACT :
 Email:  [charles_liuchang@outlook.com](mailto:charles_liuchang@outlook.com)
 
 GitHub: [ChangLiuNJU](https://github.com/ChangLiuNJU)

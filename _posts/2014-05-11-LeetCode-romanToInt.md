@@ -1,7 +1,8 @@
 ---
 layout: 	post
 title:  	"Roman to Integer"
-date:   	2014-05-11
+date:   	2014-05-11 00:00:00-0000
+modified: 	2014-05-11 00:00:00-0000
 categories: 
 - LeetCode
 tags:		[LeetCode]

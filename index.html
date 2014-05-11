@@ -7,7 +7,7 @@ title: Chang Liu
 	<article>
 		<div class="item">
 			<h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
-			<h4>{{ post.date | date_to_long_string }}</h4>
+			<h4><strong>Date:</strong> {{ post.date | date_to_string }}  <strong>Last Modified:</strong> {{ post.modified | date_to_string }}</h4>
 		</div>
 		<div class="item_content">
 			{{ post.content }}
