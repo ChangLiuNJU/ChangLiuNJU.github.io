@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: page
 title: 	About Me
 ---
 
@@ -12,7 +12,5 @@ Popping Dancer
 
 ---
 
-###CONTACT :
-Email:  [charles_liuchang@outlook.com](mailto:charles_liuchang@outlook.com)
-
-GitHub: [ChangLiuNJU](https://github.com/ChangLiuNJU)
+###CONTACT ME:
+<a title="charles_liuchang@outlook.com" href="mailto:charles_liuchang@outlook.com"><i class = "fa fa-envelope fa-2x"></i></a>&nbsp;&nbsp;<a title="ChangLiuNJU" href="https://github.com/ChangLiuNJU"><i class = "fa fa-github fa-2x"></i></a>
