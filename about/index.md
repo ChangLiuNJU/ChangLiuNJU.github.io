@@ -3,12 +3,10 @@ layout: page
 title: 	About Me
 ---
 
+Chang Liu
 
-Graduate of Nanjing University, Department of Computer Science
+A graduate student at Nanjing University, department of Computer Science.
 
-Amateur Photographer
-
-Popping Dancer
 
 ---
 
