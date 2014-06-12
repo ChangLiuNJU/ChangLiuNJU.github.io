@@ -14,9 +14,7 @@ tags:		[LeetCode]
 
 A String manipulation problem.
 
-NOTE: Roman numerals has some rules, which can make the transform more convinient.
-
-[Roman numerals-Wikipedia](http://en.wikipedia.org/wiki/Roman_numerals)
+NOTE: Roman numerals has some rules, which can make the transform more convinient. [Roman numerals-Wikipedia](http://en.wikipedia.org/wiki/Roman_numerals)
 
 Here is my code.
 

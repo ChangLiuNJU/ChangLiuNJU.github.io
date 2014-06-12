@@ -7,5 +7,5 @@ categories:
 tags:		[]
 ---
 
-### Chapter 2 Representing and Manipulating Infomation
+
 

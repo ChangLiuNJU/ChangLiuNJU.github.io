@@ -8,6 +8,6 @@ categories:
 tags:		[OS]
 ---
 
-With the purpose of manually writing a simple operating system, the project is designed for sophomores at NJUCS by JYY. Finishing it is valuable for understanding the operting system, even for the computer system, so I chose to write it and understand it more deeply during my graduate.And I will give a series of project notes.
+With the purpose of manually writing a simple operating system, the project is designed for sophomores at NJUCS by JYY. Finishing it is valuable for understanding the operating system, even for the computer system, so I chose to rewrite it and understand it more deeply during my graduate.And I will give a series of project notes.
 
 Here is the [Porject Wiki](http://cslab.nju.edu.cn/opsystem/#MainPage)

@@ -92,12 +92,19 @@ blockquote {
 	border-left: 10px solid #ccc;
 }
 code {
+	background-color: #FFF;
+	font: normal 1em Monaco, "Courier New", Courier;
+	overflow: auto;
+	border: 1px solid #ccc; 
+}
+.highlight {
+	padding: .5em 10px;
+	border: 1px solid #ccc; 
+}
+div.highlight code {
 	font-family: Monaco, "Courier New", Courier;
 	font-size: 1em;
 	overflow: auto;
-}
-.highlight {
-	/*background-color: #f5f5f5;*/
-	padding: .5em 10px;
-	border: 1px solid #ccc; 
+	border: none;
+	line-height: 0px;
 }
