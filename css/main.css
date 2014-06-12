@@ -103,7 +103,7 @@ code {
 }
 div.highlight code {
 	font-family: Monaco, "Courier New", Courier;
-	font-size: 1em;
+	font-size: 10pt;
 	border: none;
 	line-height: 0px;
 }
