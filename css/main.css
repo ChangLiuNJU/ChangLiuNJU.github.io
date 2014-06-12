@@ -94,18 +94,16 @@ blockquote {
 code {
 	background-color: #FFF;
 	font: normal 1em Monaco, "Courier New", Courier;
-	overflow: auto;
 	border: 1px solid #ccc; 
 }
 .highlight {
 	padding: .5em 10px;
 	border: 1px solid #ccc; 
+	overflow: auto;
 }
 div.highlight code {
-	width: 600px;
 	font-family: Monaco, "Courier New", Courier;
 	font-size: 1em;
-	overflow: auto;
 	border: none;
 	line-height: 0px;
 }
