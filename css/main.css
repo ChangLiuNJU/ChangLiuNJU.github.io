@@ -102,6 +102,7 @@ code {
 	border: 1px solid #ccc; 
 }
 div.highlight code {
+	width: 600px;
 	font-family: Monaco, "Courier New", Courier;
 	font-size: 1em;
 	overflow: auto;
