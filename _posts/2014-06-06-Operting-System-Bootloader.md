@@ -1,8 +1,8 @@
 ---
 layout: 	post
-title:  	"1.Bootloader"
+title:  	"[Nanos]1.Bootloader"
 date:   	2014-06-06 03:00:00-0000
-modified:   2014-06-07 00:00:00-0000
+modified:   2014-06-18 00:00:00-0000
 categories: 
 - Operating System
 tags:		[OS]
@@ -34,7 +34,7 @@ clean:
 	rm -rf bootblock *.o
 {% endhighlight %}
 
-Let's talk about the makefile first. The first two `gcc` commands compile `start.S` and `main.c` as 32-bit environment code. Then the `ld` command do the link job, genarating the `bootblock.o`, setting the program entry as "start" which is externed in `start.S`, and make sure the bootloader will be write to the memory addressed from 0x7c00([Why 0x7c00](http://www.glamenv-septzen.net/en/view/6)). The next two line transform the obj file to binary file and then transform it to bootblock with the perl script.
+Let's talk about the `Makefile` first. The first two `gcc` commands compile `start.S` and `main.c` as 32-bit environment code. Then the `ld` command do the link job, genarating the `bootblock.o`, setting the program entry as "start" which is externed in `start.S`, and make sure the bootloader will be write to the memory addressed from 0x7c00([Why 0x7c00](http://www.glamenv-septzen.net/en/view/6)). The next two line transform the obj file to binary file and then transform it to bootblock with the perl script.
 
 ###1.2 start.S, the entry of world
 
@@ -48,7 +48,7 @@ Let's talk about the makefile first. The first two `gcc` commands compile `start
 .globl start
 {% endhighlight%}
 
-Now when the computer finish it's hardware routine, it comes to the `start.S`. Note that at the time, the system is run under the [Real Mode][Real Mode], so the first line `.code 16` make the code under 16-bit environments. And next line extern the `start` which was mentioned in the Makefile.
+Now when the computer finish it's hardware routine, it comes to the `start.S`. Note that at the time, the system is run under the [Real Mode][Real Mode], so the first line `.code 16` make the code under 16-bit environments. And next line extern the `start` which was mentioned in the `Makefile`.
 
 {% highlight gas %}
 start:
@@ -99,9 +99,9 @@ gdtdesc:                           # GDT描述符
 	.long   gdt                    # GDT地址
 {% endhighlight %}
 
-And at the "gdt:" section, we defined three segments NULL, Code Segment and Data Segment with macro SEG\_NULLASM and SEG\_ASM, which are implemented in `asm.h`.
+And at the `gdt:` section, we defined three segments NULL, Code Segment and Data Segment with macro SEG\_NULLASM and SEG\_ASM, which are implemented in `asm.h`.
 
-Then the "ljmp" command jump to the "start32" label where the Protected Mode begins.Note that, here the GDT\_ENTRY is the segment selector which point to the code segment, the 1st item of GDT.
+Then the `ljmp` command jump to the `start32` label where the Protected Mode begins.Note that, here the GDT\_ENTRY is the segment selector which point to the code segment, the 1st item of GDT.
 
 {% highlight gas %}
 .code32
@@ -117,7 +117,7 @@ start32:
 	call    bootmain          # 跳转到C代码执行，此处不会返回
 {% endhighlight %} 
 
-When we come to Protected Mode, we set the DS, ES, SS as the Data Segment, the second item of GDT. And set the stack address as 0x8000. Then we jump to main.c(bootmain).
+When we come to Protected Mode, we set the DS, ES, SS as the Data Segment, the second item of GDT. And set the stack address as 0x8000. Then we jump to `main.c` (bootmain).
 
 ###1.4 main.c
 
