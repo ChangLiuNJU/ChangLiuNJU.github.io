@@ -148,7 +148,7 @@ bootmain(void) {
 }
 {% endhighlight %}
 
-After we setting the system environments with `start.S`, C code loads the kerneal from disk to memory with [ELF][ELF] format. Then the bootloader's job finished, code `((void(*)(void))elf->entry)();` jumps to the kernel.
+After we setting the system environments with `start.S`, C code loads the kernel from disk to memory with [ELF][ELF] format. Then the bootloader's job finished, code `((void(*)(void))elf->entry)();` jumps to the kernel.
 
 [Interrupt]:http://en.wikipedia.org/wiki/Interrupt
 [Protected Mode]:http://en.wikipedia.org/wiki/Protected_mode
