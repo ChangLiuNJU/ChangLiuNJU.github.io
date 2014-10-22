@@ -47,6 +47,6 @@ In the formula above, \\(\alpha\\) is called as *"learning rate"*. It controls t
 
 Fortunately, Gradient descent can converge to a local minimum, even with the learning rate \\(\alpha\\) fixed. As we approach a local minimum, gradient descent will automatically take smaller steps. So, no need to decrease \\(\alpha\\) over time. 
 
-[Linear Regression]:/images/LinearRegression0.png
+[Linear Regression]:/images/LinearRegression.png
 [Least squares]:http://en.wikipedia.org/wiki/Least_squares
 [Gradient Descent]:/images/GradientDescent.png
