@@ -1,5 +1,6 @@
 name: Chang Liu's Blog 
-markdown: redcarpet
+# markdown: redcarpet
+markdown: kramdown
 timezone : Asia/Shanghai
 pygments: true
 safe: true

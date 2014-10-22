@@ -107,3 +107,7 @@ div.highlight code {
 	border: none;
 	line-height: 0px;
 }
+img {
+	display: block;
+	margin: 0px auto;
+}
