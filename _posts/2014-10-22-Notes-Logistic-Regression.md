@@ -37,11 +37,39 @@ When \\(y=1\\), captures intuition that if \\(h_\theta(x)=0\\), predict \\(P(y=1
 
 $$ J(\theta)=\frac{1}{m}\sum_{i=1}^{m}[-y^{(i)}log(h_\theta(x^{(i)}))-(1-y^{(i)})log(1-h_\theta(x^{(i)}))] $$
 
-###One-vs-all
+###One-vs-all: Multiclass Classification
 
 Train a logistic regression classifier \\(h_\theta^{(i)}(x)\\) for each class \\(i\\) to predict the probability that \\(y=i\\).
 
 On a new input \\(x\\), to make a prediction, pick the class \\(i\\) that maximizes \\(\underset{i}{max}h_\theta^{(i)}(x)\\)
+
+###Regularization
+
+*Overfitting:If we have too many features, the learned hypothesis may fit the training set very well, but fail to generalize to new examples.*
+
+**How to address overfitting?**
+
+1.Reduce number of freatures.
+
++ Manually select which features to keep.
+
++ Model selection algrothm
+
+2.Regularization 
+
++ Intuition:Small values for \\(\theta\\) leads less prone to overfitting.
+
++ Regularized Linear Regression
+
+$$ J(\theta)=\frac{1}{2m}[\sum_{i=1}^{m}(h_\theta(x^{(i)})-y^{(i)})^2+\lambda\sum_{j=1}^{n}\theta_j^2] $$
+
++ Regularized Logistic Regression
+
+$$ J(\theta)=\frac{1}{m}\sum_{i=1}^{m}[-y^{(i)}log(h_\theta(x^{(i)}))-(1-y^{(i)})log(1-h_\theta(x^{(i)}))]+\frac{\lambda}{2m}\sum_{j=1}^{n}\theta_j^2 $$
+
+Here \\(\lambda\\) is called **regularization parameter**. As \\(\lambda\\) gets larger, the model will more overfitted.
+
+
 
 [Sigmoid Function]:/images/sigmoid.png
 [Decision Boundary]:/images/DecisionBoundary.png
