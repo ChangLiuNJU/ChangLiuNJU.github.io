@@ -1,0 +1,18 @@
+---
+layout: nil
+---
+
+<?xml version="1.0" encoding="UFT-8"?>
+<rss version="2.0">
+	<channel>
+		<title>{{ site.title }}</title>
+		<ttl>120</ttl>
+		{% for post in site.posts %}
+			<item>
+					<title>{{ post.title }}</title>
+					<link>http://charlesliuchang.com{{ post.url }}</link>
+					<pubDate>{{ post.date | date_to_string }}</pubDate>
+			</item>
+		{% endfor %}		
+	</channel>
+</rss>
