@@ -51,11 +51,11 @@ body {
 	text-align: left;
 }
 #head-content {
-	width: 650px;
+	width: 80%;
 	margin: 0px auto;
 }
 #head #about {
-	width: 590px;
+	width: 60%;
 	margin: 0px auto;
 	padding-top: 30px;
 }
