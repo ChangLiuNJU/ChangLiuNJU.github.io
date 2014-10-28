@@ -8,9 +8,7 @@ body {
 }
 #navigation {
 	margin-top: 40px;
-	margin-left: 0;
-	margin-right: auto;
-	width: 160px;
+	width: 18%;
 	font-size: 1.17em;
 	float: left;
 	text-align: right;
