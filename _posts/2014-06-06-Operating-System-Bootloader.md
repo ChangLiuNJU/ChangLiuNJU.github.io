@@ -1,12 +1,14 @@
 ---
 layout: 	post
-title:  	"[Nanos]1.Bootloader"
+title:  	"[Nanos]1. Bootloader"
 date:   	2014-06-06 03:00:00-0000
 modified:   2014-06-18 00:00:00-0000
 categories: 
 - Operating System
 tags:		[OS]
 ---
+
+Bootloader files as follow:
 
 {% highlight Bash shell scripts %}
 .
@@ -17,8 +19,6 @@ tags:		[OS]
 ├── Makefile
 └── start.S
 {% endhighlight %}
-
-Above is the tree-structure of bootloader files. 
 
 ###1.1 MakeFile
 

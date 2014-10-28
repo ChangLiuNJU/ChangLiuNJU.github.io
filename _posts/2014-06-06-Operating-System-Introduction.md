@@ -1,6 +1,6 @@
 ---
 layout: 	post
-title:  	"[Nanos]0.Project Introduction"
+title:  	"[Nanos]0. Introduction"
 date:   	2014-06-06 00:00:00-0000
 modified:   2014-06-06 00:00:00-0000
 categories: 
