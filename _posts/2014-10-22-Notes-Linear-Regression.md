@@ -20,6 +20,8 @@ In machine learning, Hypothesis is a function outputted by Learning Algorithm th
 
 $$ h_\theta=\theta^Tx=\theta_0+\theta_1x_1 $$
 
+--excerpt--
+
 ###Cost Function
 
 Cost Funcition to return a number representing how well the neural network performed to map training examples to correct output.The most widely used cost function is [Least quares][Least squares] function:

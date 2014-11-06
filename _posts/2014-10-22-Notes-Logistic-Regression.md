@@ -2,7 +2,7 @@
 layout: 	post
 title:  	"[Machine Learning]Logistic Regression"
 date:   	2014-10-22 00:00:00-0000
-modified:	2014-10-22 00:00:00-0000
+modified:	2014-11-03 00:00:00-0000
 categories: 
 - Notes
 tags:		[Notes]
@@ -23,6 +23,8 @@ where function g is the sigmoid function. The sigmoid function is defined as:
 $$ g(z)=\frac{1}{1+e^{-z}} $$
 
 ![Sigmoid Function][Sigmoid Function]
+
+--excerpt--
 
 ###Decision Boundary
 In a statistical-classification problem with two classes, a decision boundary or decision surface is a hypersurface that partitions the underlying vector space into two sets, one for each class. The classifier will classify all the points on one side of the decision boundary as belonging to one class and all those on the other side as belonging to the other class.
@@ -67,7 +69,7 @@ $$ J(\theta)=\frac{1}{2m}[\sum_{i=1}^{m}(h_\theta(x^{(i)})-y^{(i)})^2+\lambda\su
 
 $$ J(\theta)=\frac{1}{m}\sum_{i=1}^{m}[-y^{(i)}log(h_\theta(x^{(i)}))-(1-y^{(i)})log(1-h_\theta(x^{(i)}))]+\frac{\lambda}{2m}\sum_{j=1}^{n}\theta_j^2 $$
 
-Here \\(\lambda\\) is called **regularization parameter**. As \\(\lambda\\) gets larger, the model will more overfitted.
+Here \\(\lambda\\) is called **regularization parameter**. As \\(\lambda\\) gets larger, it penalize large parameter values, thereby reducing the changes of overfitting the training data set.
 
 
 
