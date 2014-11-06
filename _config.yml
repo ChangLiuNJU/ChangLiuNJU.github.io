@@ -2,7 +2,7 @@ name: Chang Liu's Blog
 title: Chang Liu's Blog
 markdown: kramdown
 timezone : Asia/Shanghai
-excerpt_separator: "--excerpt--"
+excerpt_separator: "\n\n\n"
 pygments: true
 safe: true
 auto: true

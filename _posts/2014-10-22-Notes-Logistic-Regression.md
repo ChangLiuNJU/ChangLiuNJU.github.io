@@ -24,7 +24,6 @@ $$ g(z)=\frac{1}{1+e^{-z}} $$
 
 ![Sigmoid Function][Sigmoid Function]
 
---excerpt--
 
 ###Decision Boundary
 In a statistical-classification problem with two classes, a decision boundary or decision surface is a hypersurface that partitions the underlying vector space into two sets, one for each class. The classifier will classify all the points on one side of the decision boundary as belonging to one class and all those on the other side as belonging to the other class.

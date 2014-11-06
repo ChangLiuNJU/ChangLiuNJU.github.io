@@ -20,7 +20,6 @@ In machine learning, Hypothesis is a function outputted by Learning Algorithm th
 
 $$ h_\theta=\theta^Tx=\theta_0+\theta_1x_1 $$
 
---excerpt--
 
 ###Cost Function
 

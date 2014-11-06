@@ -28,7 +28,6 @@ entry(void) {
 }
 {% endhighlight %}
 
---excerpt--
 
 ###Initialize Programmable Interval Timer
 
