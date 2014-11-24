@@ -7,7 +7,7 @@ pygments: true
 safe: true
 auto: true
 analytics:
-	provider:google
+	provider: google
 	google: 
 		tracking_id: 'UA-57041834-1'
 
