@@ -5,12 +5,12 @@ date:   	2014-10-22 00:00:00-0000
 modified:	2014-11-03 00:00:00-0000
 categories: 
 - Notes
-tags:		[Notes]
+tags:		[Notes, ML]
 ---
 
 ###Introduction
 
-In statistics, logistic regression, or logit regression, or logit model, is a type of probabilistic statistical classification model.
+>In statistics, logistic regression, or logit regression, or logit model, is a type of probabilistic statistical classification model.
 
 ###Hypothesis
 

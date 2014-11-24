@@ -2,7 +2,7 @@
 layout: default
 ---
 <h3>{{ page.title }}</h3>
-<h4><strong>Date:</strong> {{ page.date | date_to_string }}   <strong>Last Modified:</strong> {{ page.modified | date_to_string }}</h4>
+<h4><strong>Date: </strong>{{ page.date | date_to_string }}&nbsp;<strong>Last Modified: </strong>{{ page.modified | date_to_string }}</h4>
 <h4>
 	{% if page.tags %}
 		<strong>Tag: </strong>

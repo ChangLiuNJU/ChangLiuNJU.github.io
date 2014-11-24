@@ -5,14 +5,14 @@ date:   	2014-10-22 00:00:00-0000
 modified:	2014-10-22 00:00:00-0000
 categories: 
 - Notes
-tags:		[Notes]
+tags:		[Notes, ML]
 ---
 
 ###Introduction
 
 ![Linear Regression][Linear Regression]
 
-In statistics, linear regression is an approach for modeling the relationship between a scalar dependent variable y and one or more explanatory variables denoted X.
+>In statistics, linear regression is an approach for modeling the relationship between a scalar dependent variable y and one or more explanatory variables denoted X.
 
 ###Hypothesis
 
