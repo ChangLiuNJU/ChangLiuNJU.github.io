@@ -63,7 +63,7 @@ Let's down to the similarity function. If $$ x $$ is similar to $$ l^{(i)} $$, t
 
 For Gaussian Kernel SVM, there are two parameters $$ C $$ and $$ \sigma $$. Parameter $$ C $$ controls the punish on miss classified sample. With large $$ C $$, the model will be more overfitting, and has lower bias and high variance. Parameter $$ \sigma $$ controls the smoothly of new feature $$ f^{(i)} $$. With large $$ \sigma $$, feature $$ f^{(i)} $$ vary more smoothly, and the model will have higer bias and lower variance.
 
-**Linear Kernel** is also a common kernel. But actually it means we do SVM with out kernel. And it has a similar power to Logistic Regression.
+**Linear Kernel** is also a common used kernel. But actually it means we do SVM without kernel. And it has a similar power to Logistic Regression.
 
 Kernel function is a powerful tool for SVM. Actually, we can perform kernel on other classifier, but it is much more computationally expensive than SVM. Excepte Gaussian Kernel and Linear Kernel, there are also some other [kernel function][Kernel function] for diffierent problem such as String Kernel, Graph Kernel and so on.
 
