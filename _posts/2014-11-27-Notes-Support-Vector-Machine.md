@@ -22,6 +22,7 @@ tags:		[Notes, ML]
 
 Hypothsis function in SVM(red line) has a little different from what we used in logistic regression. In some way, they have pretty similar effects, but the SVM hypothsis turns out support vector machine computational advantage. 
 
+
 ###Cost Function
 
 $$ \underset{\theta}{min}C\sum_{i=1}^{m}\left[y^{(i)}cost_1(\theta^Tx^{(i)})+(1-y^{(i)})cost_0(\theta^Tx^{(i)})\right]+\frac{1}{2}\sum_{i=1}^{n}\theta_j^2 $$
