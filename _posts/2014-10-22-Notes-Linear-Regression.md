@@ -1,6 +1,6 @@
 ---
 layout: 	post
-title:  	"[Machine Learning]Linear Regression"
+title:  	"[Machine Learning] Linear Regression"
 date:   	2014-10-22 00:00:00-0000
 modified:	2014-10-22 00:00:00-0000
 categories: 

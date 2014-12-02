@@ -1,6 +1,6 @@
 ---
 layout: 	post
-title:  	"[Computer System]2.Representing and manipulating Information"
+title:  	"[Computer System] 2.Representing and manipulating Information"
 date:   	2014-04-21 00:00:00-0000
 modified:	2014-07-07 00:00:00-0000
 categories: 

@@ -1,6 +1,6 @@
 ---
 layout: 	post
-title:  	"[Machine Learning]Support Vector Machine"
+title:  	"[Machine Learning] Support Vector Machine"
 date:   	2014-11-27 00:00:00-0000
 modified:	2014-11-27 00:00:00-0000
 categories: 

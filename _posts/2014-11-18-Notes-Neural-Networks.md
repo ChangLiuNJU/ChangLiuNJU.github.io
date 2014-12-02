@@ -1,6 +1,6 @@
 ---
 layout: 	post
-title:  	"[Machine Learning]Neural Networks"
+title:  	"[Machine Learning] Neural Networks"
 date:   	2014-11-18 00:00:00-0000
 modified:	2014-11-19 00:00:00-0000
 categories: 
