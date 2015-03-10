@@ -2,13 +2,13 @@
 layout: 	post
 title:  	"[Nanos]1. Bootloader"
 date:   	2014-06-06 03:00:00-0000
-modified:   2014-06-18 00:00:00-0000
+modified:   2015-03-09 00:00:00-0000
 categories: 
 - Operating System
 tags:		[OS]
 ---
 
-Bootloader files as follow:
+Bootloader contents:
 
 {% highlight Bash shell scripts %}
 .
@@ -34,9 +34,9 @@ clean:
 	rm -rf bootblock *.o
 {% endhighlight %}
 
-Let's talk about the `Makefile` first. The first two `gcc` commands compile `start.S` and `main.c` as 32-bit environment code. Then the `ld` command do the link job, genarating the `bootblock.o`, setting the program entry as "start" which is externed in `start.S`, and make sure the bootloader will be write to the memory addressed from 0x7c00([Why 0x7c00](http://www.glamenv-septzen.net/en/view/6)). The next two line transform the obj file to binary file and then transform it to bootblock with the perl script.
+`Makefile` complie `tart.S` and `main.c` under 32-bit environment, and load the entry of Bootloader - `start` which realiszed in `start.S` into 0x7C00([Why 0x7c00](http://www.glamenv-septzen.net/en/view/6)) after linking. Then it call the perl script `genboot.pl` to transform the obj file into 512 bytes bootblock. 
 
-###1.2 start.S, the entry of world
+###1.2 start.S - The entry of the world
 
 {% highlight gas %}
 # 系统启动时，BIOS会完成初始化，然后将磁盘第一个512字节保存到物理内存0x00007C00
@@ -48,7 +48,7 @@ Let's talk about the `Makefile` first. The first two `gcc` commands compile `sta
 .globl start
 {% endhighlight%}
 
-Now when the computer finish it's hardware routine, it comes to the `start.S`. Note that at the time, the system is run under the [Real Mode][Real Mode], so the first line `.code 16` make the code under 16-bit environments. And next line extern the `start` which was mentioned in the `Makefile`.
+Now when the computer finish it's hardware routine, it comes to the `start.S`. Note that at the time, the system is run under the [Real Mode][Real Mode], so the first line `.code 16` make the code under 16-bits environment. And next line extern the `start` which was mentioned in the `Makefile`.
 
 {% highlight gas %}
 start:
@@ -72,9 +72,17 @@ start:
 
 Then we turn off the hardware [interrupt][Interrupt], setting the segment register DS, ES, and SS to zero, openning the [A20 line][A20], setting the [GDT][GDT] and [control register CR0](http://en.wikipedia.org/wiki/Control_register).
 
-###1.3 GDT, Protected Mode, and A BIG JUMP
+###1.3 A20 Line
 
-Befor [Protected Mode][Protected Mode] introduced by 80286, the 8086 computer run in [Real Mode][Real Mode], which giving exactly 1MiB of addressable memory. To access a memory unit, we caculate the physical address by "base << 4 + offset". So with the 16bit Segment Register, the physical address can reach 20bits, giving 1MiB addressing space. 
+The A20 Address Line is the physical representation of the 21st bit (number 20, counting from 0) of any memory access. When the IBM-AT (Intel 286) was introduced, it was able to access up to sixteen megabytes of memory (instead of the 1 MByte of the 8086). But to remain compatible with the 8086, a quirk in the 8086 architecture (memory wraparound) had to be duplicated in the AT. To achieve this, the A20 line on the address bus was disabled by default.
+
+Acctually, there are 3 ways to open A20, and the morden computer use a fast way which read/write 0x92 port, but we use BIOS 0x15 instead. 
+
+###1.4 GDT, Protected Mode, and A BIG JUMP
+
+Befor [Protected Mode][Protected Mode] introduced by 80286, the 8086 computer run in [Real Mode][Real Mode], which giving exactly 1MiB of addressable memory. To access a memory unit, we caculate the physical address by "base << 4 + offset". So with the 16bit Segment Register, the physical address can reach 20bits, giving 1MiB addressing space.
+
+But actually, using two 16-bit register which's max value is 0xFFFF, the address could only reach (0xFFFF) << 4 + 0xFFFF = 0x10FFEF. That is why we need another bit - A20.
 
 When it comes to Protected Mode, the base:offset addressing mode has a little change. For extending the addressing space with downward compatible with the Intes-x86 family before 80286, the segment registers are used as index of [GDT][GDT], which defined the base, limit and properties of a segment.
 
@@ -101,7 +109,7 @@ gdtdesc:                           # GDT描述符
 
 And at the `gdt:` section, we defined three segments NULL, Code Segment and Data Segment with macro SEG\_NULLASM and SEG\_ASM, which are implemented in `asm.h`.
 
-Then the `ljmp` command jump to the `start32` label where the Protected Mode begins.Note that, here the GDT\_ENTRY is the segment selector which point to the code segment, the 1st item of GDT.
+Then the `ljmp` command jump to the `start32` label where the Protected Mode begins. Note that, here the GDT\_ENTRY is the segment selector which point to the code segment, the 1st item of GDT.
 
 {% highlight gas %}
 .code32
@@ -119,7 +127,7 @@ start32:
 
 When we come to Protected Mode, we set the DS, ES, SS as the Data Segment, the second item of GDT. And set the stack address as 0x8000. Then we jump to `main.c` (bootmain).
 
-###1.4 main.c
+###1.5 main.c
 
 {% highlight cpp %}
 void
@@ -148,7 +156,7 @@ bootmain(void) {
 }
 {% endhighlight %}
 
-After we setting the system environments with `start.S`, C code loads the kernel from disk to memory with [ELF][ELF] format. Then the bootloader's job finished, code `((void(*)(void))elf->entry)();` jumps to the kernel.
+After we setting the system environments with `start.S`, C code loads the kernel from disk to memory with [ELF][ELF] format. Then the bootloader`s job finished, code `((void(*)(void))elf->entry)();` jumps to the kernel.
 
 [Interrupt]:http://en.wikipedia.org/wiki/Interrupt
 [Protected Mode]:http://en.wikipedia.org/wiki/Protected_mode
