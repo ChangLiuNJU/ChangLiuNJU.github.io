@@ -5,7 +5,7 @@ date:   	2015-01-31 00:00:00-0000
 modified:	2015-01-31 00:00:00-0000
 categories: 
 - Notes
-tags:		[Alogrithm]
+tags:		[Algorithm]
 ---
 
 ###Master Threorem
