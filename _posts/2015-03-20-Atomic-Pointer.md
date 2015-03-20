@@ -12,7 +12,7 @@ tags:		[Leveldb]
 
 Leveldb为了支持对于变量的原子性操作，提供了原子性指针Atomic Pointer，并且根据不同的platform进行了相应实现。
 
-###Base on MemoryBarrier()
+###Based on MemoryBarrier()
 
 {% highlight cpp %}
 
@@ -46,7 +46,7 @@ class AtomicPointer {
 
 此外，AtomicPointer也提供了非原子性的访问操作NoBarrier_Load和NoBarrier_Store。
 
-###Base on \<cstdatomic\>
+###Based on \<cstdatomic\>
 
 {% highlight cpp %}
 
@@ -85,7 +85,7 @@ C++11提供了\<atomic\>包，并且提供了对于数据加载时的同步模�
 
 可以看到，AtomicPoint在此只是进行了简单的封装。
 
-###Base on sparc memory barriers && ia64 acq/rel
+###Based on sparc memory barriers && ia64 acq/rel
 
 {% highlight cpp %}
 
@@ -153,7 +153,7 @@ class AtomicPointer {
 
 这里只是基于不同的体系结构，进行了相似的封装，不(完)再(全)详(看)述(不)了(懂)。
 
-###Base on 其他
+###Based on 其他
 
 {% highlight cpp %}
 
