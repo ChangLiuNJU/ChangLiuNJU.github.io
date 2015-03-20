@@ -1,5 +1,6 @@
 body {
-	font: normal 1em "Avenir Next", Helvetica, Arial, sans-serif;
+	font: normal 1em "Avenir Next", 'Microsoft YaHei'，Helvetica, Arial, sans-serif;
+	/*font:Galdeano, 'Hiragino Sans GB', 'Microsoft YaHei', Trebuchet, 'Trebuchet MS', Tahoma, 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;*/
 	margin: 0px;
 	padding: 0px;
 	color: #4c4c4c;
@@ -100,7 +101,7 @@ code {
 	overflow: auto;
 }
 div.highlight code {
-	font-family: Monaco, "Courier New", Courier;
+	font-family: Consolas, 'ConsolasRegular', 'Courier New', monospace !important;
 	font-size: 10pt;
 	border: none;
 	line-height: 0px;
