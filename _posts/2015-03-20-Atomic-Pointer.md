@@ -11,14 +11,15 @@ tags:		[Leveldb]
 ###Atomic Pointer
 
 Leveldb为了支持对于变量的原子性操作，提供了原子性指针Atomic Pointer，并且根据不同的platform进行了相应实现。
-
+o
 ###Based on MemoryBarrier()
 
 {% highlight cpp %}
 
 // AtomicPointer built using platform-specific MemoryBarrier()
+
 #if defined(LEVELDB_HAVE_MEMORY_BARRIER)
-class AtomicPointer {
+colass AtomicPointer {
  private:
   void* rep_;
  public:
@@ -45,6 +46,7 @@ class AtomicPointer {
 + 在Release_Store中，MemoryBarrier保证对rep_的更改“按照顺序”执行。
 
 此外，AtomicPointer也提供了非原子性的访问操作NoBarrier_Load和NoBarrier_Store。
+
 
 ###Based on \<cstdatomic\>
 
